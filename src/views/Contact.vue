@@ -32,7 +32,7 @@
                   </div>
 
                   <!--Form Start-->
-                  <form id="contact-form" method="post" action="https://watson-vcard.netlify.app/mail.php">
+                  <form id="contact-form" method="post" action="">
                       <div class="row">
 
 

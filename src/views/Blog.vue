@@ -12,21 +12,21 @@
             date: 'August 15, 2018',
             category: 'Web Design',
             image: img1,
-            link: 'blog-dark.html'
+            link: ''
         },
         {
             title: 'Things I Need to Get Started',
             date: 'August 10, 2018',
             category: 'Personal',
             image: img2,
-            link: 'blog-dark.html'
+            link: ''
         },
         {
             title: 'My Current Workspace',
             date: 'August 4, 2018',
             category: 'Design',
             image: img3,
-            link: 'blog-dark.html'
+            link: ''
         }
     ]
 
