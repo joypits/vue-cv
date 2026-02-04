@@ -1,31 +1,27 @@
 <template>
   <header>
-    <div class="header-content">
+   <div class="header-content" :class="{ on: isMenuOpen }">
 
-      <!-- Mobile Header -->
-      <div class="header-mobile">
-        <a class="header-toggle" @click="toggleMenu">
-          <i class="fas fa-bars"></i>
-        </a>
-        <h2>{{ name }}</h2>
-      </div>
+  <!-- Mobile Header -->
+  <div class="header-mobile">
+    <a href="#" class="header-toggle" @click.prevent="toggleMenu">
+      <i class="fas fa-bars"></i>
+    </a>
+    <h2>{{ name }}</h2>
+  </div>
 
-      <!-- Main Header -->
-      <div
-        class="header-main"
-        data-simplebar
-        :class="{ open: isMenuOpen }"
-      >
-        <div class="image-container">
-          <h2 class="header-name">{{ name }}</h2>
-          <img :src="profileImage" alt="profile-pic" />
-        </div>
-
-        <Navigation />
-        <Footer />
-      </div>
-
+  <!-- Main Header -->
+  <div class="header-main" data-simplebar>
+    <div class="image-container">
+      <h2 class="header-name">{{ name }}</h2>
+      <img :src="profileImage" alt="profile-pic" />
     </div>
+
+    <Navigation />
+    <Footer />
+  </div>
+
+</div>
   </header>
 </template>
 
