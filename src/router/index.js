@@ -1,21 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
-import Resume from '@/views/Resume.vue'
-import Contact from '@/views/Contact.vue'
-import Portfolio from '@/views/Portfolio.vue'
-import Blog from '@/views/Blog.vue'
-const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
-  { path: '/resume', component: Resume },
-  { path: '/portfolio', component: Portfolio },
-  { path: '/blog', component: Blog },
-  { path: '/contact', component: Contact },
-]
-
-export default createRouter({
-  history: createWebHistory(),
-  routes,
+const router = createRouter({
+  history: createWebHistory('/vue-cv/'),
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: () => import('@/views/Home.vue'),
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: () => import('@/views/About.vue'),
+    },
+    {
+      path: '/resume',
+      name: 'Resume',
+      component: () => import('@/views/Resume.vue'),
+    },
+    {
+      path: '/portfolio',
+      name: 'Portfolio',
+      component: () => import('@/views/Portfolio.vue'),
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
+      component: () => import('@/views/Blog.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: () => import('@/views/Contact.vue'),
+    },
+  ],
 })
+
+export default router
