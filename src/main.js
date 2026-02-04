@@ -14,7 +14,6 @@ import '@/assets/css/plugins/simplebar.css'
 
 
 import '@/assets/css/style-dark.css'
-import '@/assets/css/style-demo.css'
 import '@/assets/css/blue-color.css'
 
 createApp(App)

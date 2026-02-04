@@ -43,40 +43,6 @@ const services = [
   },
 ]
 
-// ===== CLIENTS =====
-// const clients = [
-//   'client-01.png',
-//   'client-02.png',
-//   'client-03.png',
-//   'client-04.png',
-//   'client-05.png',
-//   'client-06.png',
-//   'client-07.png',
-//   'client-08.png',
-//   'client-09.png',
-// ]
-
-// ===== TESTIMONIALS =====
-// const testimonials = [
-//   {
-//     img: 'author-1.jpg',
-//     name: 'Kate Fox',
-//     role: 'Digital Marketing Executive',
-//     text: 'Ipsum ab necessitatibus numquam vitae quis. Nobis nostrum deserunt suscipit eos fugit.',
-//   },
-//   {
-//     img: 'author-2.jpg',
-//     name: 'Emma Jones',
-//     role: 'Creative Director',
-//     text: 'Ipsum ab necessitatibus numquam vitae quis. Nobis nostrum deserunt suscipit eos fugit.',
-//   },
-//   {
-//     img: 'author-3.jpg',
-//     name: 'Jack Smith',
-//     role: 'Marketing Director',
-//     text: 'Ipsum ab necessitatibus numquam vitae quis. Nobis nostrum deserunt suscipit eos fugit.',
-//   },
-// ]
 </script>
 
 <template>
@@ -139,55 +105,6 @@ const services = [
           </div>
         </div>
       </div>
-
-      <!-- Clients -->
-      <!-- <div class="row mb-70">
-  <div class="col-md-12">
-    <div class="subheading">
-      <h3>Clients</h3>
-    </div>
-  </div>
-
-  <div
-    v-for="(client, i) in clients"
-    :key="i"
-    class="client-logo col-md-2"
-  >
-    <img
-      :src="`/img/clients/${client}`"
-      alt="Client"
-      style="max-width:100%; height:auto"
-    />
-  </div>
-</div> -->
-
-      <!-- Testimonials -->
-      <!-- <div class="row testimonials mb-50">
-        <div class="col-md-12">
-          <div class="subheading">
-            <h3>Testimonials</h3>
-          </div>
-
-          <div
-            v-for="(t, i) in testimonials"
-            :key="i"
-            class="testimonial-item"
-          >
-            <div class="testimonial-content">
-              <p>{{ t.text }}</p>
-            </div>
-
-            <div class="testimonial-meta">
-              <img :src="`/img/testimonials/${t.img}`" alt="Author" />
-              <div class="meta-info">
-                <h4>{{ t.name }}</h4>
-                <p>{{ t.role }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
     </div>
   </section>
 </template>
