@@ -1,37 +1,17 @@
 <script setup>
-  const portfolioItems = [
-    {
-      category: 'WebApp',
-      image: 'img/portfolio/img-1.jpg',
-      title: 'Book Design',
-      description: 'WebApp'
-    },
-    {
-      category: 'Cybersecurity',
-      image: 'img/portfolio/img-2.jpg',
-      title: 'Notepad Design',
-      description: 'Cybersecurity'
-    },
-    {
-      category: 'Photography',
-      image: 'img/portfolio/img-3.jpg',
-      title: 'Creative Cup',
-      description: 'Photography'
-    },
-    {
-      category: 'Cybersecurity',
-      image: 'img/portfolio/img-4.jpg',
-      title: 'Business Card',
-      description: 'Cybersecurity'
-    },
-    {
-      category: 'WebApp',
-      image: 'img/portfolio/img-5.jpg',
-      title: 'Back Pack',
-      description: 'WebApp'
-    }
-  ]
+import img1 from '@/assets/img/portfolio/img-1.jpg'
+import img2 from '@/assets/img/portfolio/img-2.jpg'
+import img3 from '@/assets/img/portfolio/img-3.jpg'
+import img4 from '@/assets/img/portfolio/img-4.jpg'
+import img5 from '@/assets/img/portfolio/img-5.jpg'
 
+const portfolioItems = [
+  { category: 'WebApp', image: img1, title: 'Book Design', description: 'WebApp' },
+  { category: 'Cybersecurity', image: img2, title: 'Notepad Design', description: 'Cybersecurity' },
+  { category: 'Photography', image: img3, title: 'Creative Cup', description: 'Photography' },
+  { category: 'Cybersecurity', image: img4, title: 'Business Card', description: 'Cybersecurity' },
+  { category: 'WebApp', image: img5, title: 'Back Pack', description: 'WebApp' }
+]
   const filters = ['All', 'WebApp', 'Cybersecurity', 'Photography', 'Certifications']
   
 </script>

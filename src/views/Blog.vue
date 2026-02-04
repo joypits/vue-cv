@@ -2,26 +2,30 @@
     const title = 'My Personal Portfolio';
     const description = 'Read my latest articles and updates on web application development, technology, and lifestyle.';
     
+    import img1 from '@/assets/img/blog/img-1.jpg'
+    import img2 from '@/assets/img/blog/img-2.jpg'
+    import img3 from '@/assets/img/blog/img-3.jpg'
+
     const myBlogs = [
         {
             title: 'Best Way to Design',
             date: 'August 15, 2018',
             category: 'Web Design',
-            image: 'img/blog/img-1.jpg',
+            image: img1,
             link: 'blog-dark.html'
         },
         {
             title: 'Things I Need to Get Started',
             date: 'August 10, 2018',
             category: 'Personal',
-            image: 'img/blog/img-2.jpg',
+            image: img2,
             link: 'blog-dark.html'
         },
         {
             title: 'My Current Workspace',
             date: 'August 4, 2018',
             category: 'Design',
-            image: 'img/blog/img-3.jpg',
+            image: img3,
             link: 'blog-dark.html'
         }
     ]

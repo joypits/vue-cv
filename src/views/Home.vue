@@ -1,5 +1,5 @@
 <script setup>
-const homeImage = '/img/background/home-bg2.png'
+import homeImage from '@/assets/img/background/home-bg2.png'
 const homeTitle = [
   { name: 'Joy Faith', highlight: 'Prieto' },
 ]

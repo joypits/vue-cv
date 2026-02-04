@@ -35,7 +35,7 @@ import Navigation from './Navigation.vue'
 import Footer from './Footer.vue'
 
 const name = ref('Joy Faith Prieto')
-const profileImage = ref('/img/profile-img.jpg') // 👈 public folder
+import profileImage from '@/assets/img/profile-img.jpg'
 const isMenuOpen = ref(false)
 
 const toggleMenu = () => {
