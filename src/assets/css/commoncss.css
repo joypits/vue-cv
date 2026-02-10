@@ -1,0 +1,16 @@
+.spinner {
+  border: 2px solid #f3f3f3; /* light grey */
+  border-top: 2px solid #4CAF50; /* green */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

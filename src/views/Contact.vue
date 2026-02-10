@@ -1,18 +1,91 @@
 <script setup>
-  const contactInfo = [
+import axios from 'axios'
+import { reactive, ref } from 'vue';
+import api from '@/services/api'; // ← this is the key step
+
+const contactInfo = [
     {
-      icon: 'fas fa-paper-plane',
-      description: 'joypitprieto@gmail.com',
+        icon: 'fas fa-paper-plane',
+        description: 'joypitprieto@gmail.com',
     },
     {
-      icon: 'fas fa-map-marker-alt',
-      description: 'Manila, Philippines',
+        icon: 'fas fa-map-marker-alt',
+        description: 'Manila, Philippines',
     },
     {
-      icon: 'fas fa-phone',
-      description: '091234567890',
+        icon: 'fas fa-phone',
+        description: '091234567890',
     }
-  ]
+]
+
+const form = reactive({
+  name: '',
+  email: '',
+  message: ''
+});
+
+const alertMessage = ref('');
+const alertType = ref('');
+const token = ref('');
+
+const isLoading = ref(false);
+function showAlert(message, type = 'alert-success', duration = 2000) {
+  alertMessage.value = message;
+  alertType.value = type;
+  setTimeout(() => {
+    alertMessage.value = '';
+    alertType.value = '';
+  }, duration);
+}
+function resetForm() {
+  form.name = '';
+  form.email = '';
+  form.message = '';
+}
+
+const handleSubmit = async () => {
+  if (!form.name || !form.email || !form.message) {
+    showAlert('Please fill in all fields.', 'alert-error');
+    return;
+  }
+  isLoading.value = true; // show spinner
+  try {
+    // Submit contact form
+    await api.post(
+      '/contact',
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token.value}`
+        }
+      }
+    );
+
+    alertMessage.value = 'Message sent successfully!';
+    alertType.value = 'alert-success';
+    
+    // Automatically hide after 2 seconds
+    setTimeout(() => {
+      alertMessage.value = '';
+      alertType.value = '';
+    }, 2000);
+
+    // reset form
+    resetForm()
+
+  } catch (error) {
+    console.error(error.response?.data || error);
+    showAlert('Something went wrong.', 'alert-error');
+  } finally {
+    isLoading.value = false; // hide spinner
+  }
+};
+
+
 </script>
 <template>
    <section class="contact-section pt-page">
@@ -31,47 +104,70 @@
                       <h3>Let's Talk</h3>
                   </div>
 
-                  <!--Form Start-->
-                  <form id="contact-form" method="post" action="">
-                      <div class="row">
+                <!-- Form Start -->
+                <form id="contact-form" >
+                    <div class="row">
 
+                    <!-- Name Field -->
+                    <div class="col-md-6 mb-50">
+                        <span class="input">
+                        <input
+                            class="input__field"
+                            type="text"
+                            id="cf-name"
+                            v-model="form.name"
+                            required
+                        />
+                        <label class="input__label" for="cf-name">Name</label>
+                        </span>
+                    </div>
 
-                          <!--Name Field-->
-                          <div class="col-md-6 mb-50">
-                              <span class="input">
-                                  <input class="input__field cf-validate" type="text" id="cf-name" name="name" />
-                                  <label class="input__label" for="cf-name">Name</label>
-                              </span>
-                          </div>
+                    <!-- Email Field -->
+                    <div class="col-md-6 mb-50">
+                        <span class="input">
+                        <input
+                            class="input__field"
+                            type="email"
+                            id="cf-email"
+                            v-model="form.email"
+                            required
+                        />
+                        <label class="input__label" for="cf-email">Email</label>
+                        </span>
+                    </div>
 
-                          <!--Email Field-->
-                          <div class="col-md-6 mb-50">
-                              <span class="input">
-                                  <input class="input__field cf-validate" type="text" id="cf-email" name="email" />
-                                  <label class="input__label" for="cf-email">Email</label>
-                              </span>
-                          </div>
+                    <!-- Message Box -->
+                    <div class="col-md-12 mb-30">
+                        <span class="input">
+                        <textarea
+                            class="input__field"
+                            id="cf-message"
+                            rows="5"
+                            v-model="form.message"
+                            placeholder="How may I help you?"
+                            required
+                        ></textarea>
+                        </span>
+                    </div>
 
-                          <!--Message Box-->
-                          <div class="col-md-12 mb-30">
-                              <span class="input">
-                                  <textarea  class="input__field cf-validate" id="cf-message" name="message" rows="5" ></textarea>
-                                  <label class="input__label" for="cf-message">How can we help you?</label>
-                              </span>
-                          </div>
+                    <!-- Alert Message -->
+                    <div class="alert-container col-md-12" v-if="alertMessage">
+                        <p :class="alertType">{{ alertMessage }}</p>
+                    </div>
 
-                          <div class="alert-container col-md-12"></div>
+                    <!-- Submit Button -->
+                    <div class="col-md-12 text-center">
+                       <SpinnerButton
+                        :loading="isLoading"
+                        @click="handleSubmit"
+                        >
+                        Send Message
+                        </SpinnerButton>
+                    </div>
 
-                          <!--Submit Button-->
-                          <div class="col-md-12 text-center">
-                              <button id="cf-submit" class="btn-main">Send Message</button>
-                          </div>
-
-
-                      </div>
-                  </form>
-                  <!--Form End-->
-
+                    </div>
+                </form>
+                <!-- Form End -->
               </div>
           </div>
 

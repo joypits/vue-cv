@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index.js'
-
+import SpinnerButton from '@/components/common/SpinnerButton.vue'
 // CSS imports (these are fine)
 import '@/assets/css/plugins/bootstrap.css'
 import '@/assets/css/plugins/font-awesome.css'
@@ -14,9 +14,10 @@ import '@/assets/css/plugins/simplebar.css'
 import '@/assets/css/style-dark.css'
 import '@/assets/css/style-demo.css'
 import '@/assets/css/blue-color.css'
+import '@/assets/css/commoncss.css'
 
 const app = createApp(App)
-
+app.component('SpinnerButton', SpinnerButton)
 router.afterEach(() => {
   setTimeout(() => {
     if (window.initTemplate) {

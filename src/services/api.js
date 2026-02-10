@@ -1,5 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-export default axios.create({
-  baseURL: "/api"
+const api = axios.create({
+  baseURL: 'https://laravel-cv-backend-production.up.railway.app/api', // your Laravel API URL
+  headers: {
+    Accept: 'application/json',
+  },
 });
+
+export default api;
