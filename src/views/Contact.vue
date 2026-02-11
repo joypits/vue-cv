@@ -100,10 +100,7 @@ const handleSubmit = async () => {
           <!--Form Row-->
           <div class="row mb-70">
               <div class="col-lg-8  offset-lg-2">
-                  <div class="subheading">
-                      <h3>Let's Talk</h3>
-                  </div>
-
+               
                 <!-- Form Start -->
                 <form id="contact-form" >
                     <div class="row">
