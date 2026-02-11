@@ -35,21 +35,45 @@ const education = [
 ]
 
 const skills = [
+{
+  title: 'Cybersecurity Fundamentals',
+  items: [
+    { name: 'CompTIA Security+ Training' },
+    { name: 'IAM & Access Control' },
+    { name: 'SIEM & Log Analysis (Basic)' },
+    { name: 'Active Directory Fundamentals' },
+    { name: 'Network Security (DNS, Subnetting, Firewalls)' },
+    { name: 'Virtual Lab Deployment & SSL Certificates' }
+  ]
+},
+{
+  title: 'Full-Stack Development',
+  items: [
+    { name: 'Laravel REST API Development', value: 85 },
+    { name: 'Vue.js (SPA Development)', value: 85 },
+    { name: 'JavaScript (ES6+)', value: 85 },
+    { name: 'MySQL & Database Design', value: 80 },
+    { name: 'Deployment & Production Debugging', value: 85 }
+  ]
+},
   {
-    title: 'Cybersecurity Skills',
+    title: 'Deployment & DevOps Skills',
     items: [
-      { name: 'Coral Draw', value: 91 },
-      { name: 'Photoshop', value: 82 },
-      { name: 'Illustrator', value: 94 }
+      { name: 'Vercel (Frontend Deployment)', value: 90 },
+      { name: 'Railway (Laravel Backend Deployment)', value: 90 },
+      { name: 'GitHub Pages (Static Hosting)', value: 90 },
+      { name: 'AWS Lightsail (Basic Deployment Setup)', value: 60 },
+      { name: 'Environment Configuration (.env)', value: 90 },
+      { name: 'CI/CD Deployment', value: 80 },
+      { name: 'CORS & API Integration', value: 80 },
     ]
   },
   {
-    title: 'Coding Skills',
+    title: 'Tools & Collaboration',
     items: [
-      { name: 'PHP Laravel', value: 87 },
-      { name: 'Vue.js', value: 85 },
-      { name: 'Node.js', value: 85 },
-      { name: 'Javascript', value: 80 },
+      { name: 'Git (Version Control)', value: 85 },
+      { name: 'Bitbucket', value: 85 },
+      { name: 'Jira', value: 80 }
     ]
   },
   {
@@ -145,7 +169,7 @@ const skills = [
                 :style="{ width: skill.value + '%' }"
               >
                 <div class="progress-value">
-                  {{ skill.value }}%
+                  {{ skill.value }}
                 </div>
               </div>
             </div>
