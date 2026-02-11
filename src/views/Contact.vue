@@ -116,9 +116,9 @@ const handleSubmit = async () => {
                             type="text"
                             id="cf-name"
                             v-model="form.name"
+                            placeholder="Name"
                             required
                         />
-                        <label class="input__label" for="cf-name">Name</label>
                         </span>
                     </div>
 
@@ -130,9 +130,9 @@ const handleSubmit = async () => {
                             type="email"
                             id="cf-email"
                             v-model="form.email"
+                            placeholder="Email"
                             required
                         />
-                        <label class="input__label" for="cf-email">Email</label>
                         </span>
                     </div>
 
