@@ -4,8 +4,8 @@ const homeTitle = [
   { name: 'Joy Faith', highlight: 'Prieto' },
 ]
 const positionTitle = [
-  { name: 'Software Developer' },
-  { name: 'SOC Analyst' },
+  { name: 'Full-Stack Developer' },
+  { name: 'Experience DevOps and Cybersecurity' },
   { name: 'Freelance Photographer' }
 ]
 </script>

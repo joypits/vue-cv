@@ -4,7 +4,7 @@ const experience = [
     title: 'Information Technology Officer I',
     company: 'Office of the President, Malacañang, Manila, PHILIPPINES',
     description:
-      'Sit cupiditate praesentium ex esse nulla Facere fuga perspiciatis eveniet provident neque.',
+      'Responsible for developing, deploying, and maintaining web applications and IT systems to support the operations of the Office of the President. This includes designing and implementing software solutions, managing databases, ensuring system security, and providing technical support to end-users.',
     from: '2017',
     to: 'Present'
   }
@@ -16,7 +16,7 @@ const education = [
     school: 'Philippine Christian University, Taft Avenue, Manila, PHILIPPINES',
     description:
     [
-      'Capstone project: Facial Logs Recognition System'
+      'Capstone project: Attendance Management System Based on Turnstile Face Recognition with Data Analytics for Government Agencies'
     ],
     from: '2022',
     to: '2024'

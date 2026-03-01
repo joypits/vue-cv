@@ -14,12 +14,12 @@ const services = [
   {
     icon: 'lnr lnr-laptop',
     title: 'Web Development',
-    desc: 'PHP Laravel, Vue.js, Node.js, RESTful APIs, MySQL, PostgreSQL',
+    desc: 'PHP Laravel, Vue.js, JavaScript, Node.js, RESTful APIs, MySQL',
   },
   {
     icon: 'lnr lnr-laptop',
     title: 'Application Deployment',
-    desc: 'Vercel, Terraform, Git, Bitbucket, GitHub',
+    desc: 'Vercel, Railway, Git, Bitbucket, GitHub',
   },
   {
     icon: 'lnr lnr-laptop',
@@ -57,11 +57,11 @@ const services = [
       <!-- About Info -->
       <div class="row about mb-70">
         <div class="col-lg-8">
-          <h3 class="mb-20">Software Developer & SOC Analyst</h3>
+          <h3 class="mb-20">Full-Stack Developer with Experience in DevOps and Cybersecurity</h3>
           <p>
-            I am a Software Developer and SOC Analyst with experience in building, deploying, and securing scalable web applications. As a Full-Stack Developer, I specialize in developing robust systems using modern frameworks while ensuring performance, reliability, and security best practices. <br />
-            I have hands-on experience in system deployment, optimization, and maintenance, with a strong understanding of cloud infrastructure and cybersecurity operations. My security background includes working with SIEM tools, virtualization technologies, Active Directory, IAM, and ticketing systems, enabling me to bridge development and security effectively. <br />
-            From a development perspective, I work with PHP Laravel, Vue.js, Node.js, RESTful APIs, MySQL, and PostgreSQL to deliver efficient and maintainable solutions. For application deployment and infrastructure, I use Vercel and Terraform, and I am proficient in version control using Git, Bitbucket, and GitHub.
+           I am a Full-Stack Developer with proven experience in designing, developing, deploying, and securing scalable web applications. I specialize in building robust systems following the Software Development Life Cycle (SDLC), leveraging modern frameworks and technologies while adhering to performance, reliability, and security best practices.
+          I have hands-on experience in system deployment, optimization, and maintenance, supported by a strong foundation in cloud infrastructure and cybersecurity operations. My security expertise includes working with SIEM tools, virtualization technologies, Active Directory, Identity and Access Management (IAM), and ticketing systems—allowing me to effectively bridge the gap between development and security.
+          From a development standpoint, I work extensively with PHP Laravel, Vue.js, Node.js, RESTful APIs, and MySQL to deliver efficient, scalable, and maintainable solutions. For infrastructure and deployment, I utilize Vercel and Railway, and I am proficient in version control and collaboration tools including Git, Bitbucket, and GitHub.
           </p>
         </div>
 

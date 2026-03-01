@@ -1,21 +1,21 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-import img1 from '@/assets/img/portfolio/img-1.jpg'
+import img1 from '@/assets/img/portfolio/iconstagecraftbuilders.png'
 import img2 from '@/assets/img/portfolio/img-2.jpg'
 import img3 from '@/assets/img/portfolio/img-3.jpg'
 import img4 from '@/assets/img/portfolio/img-4.jpg'
 import img5 from '@/assets/img/portfolio/img-5.jpg'
 
 const portfolioItems = [
-  { category: 'WebApp', image: img1, title: 'Book Design', description: 'WebApp' },
-  { category: 'Cybersecurity', image: img2, title: 'Notepad Design', description: 'Cybersecurity' },
-  { category: 'Photography', image: img3, title: 'Creative Cup', description: 'Photography' },
-  { category: 'Cybersecurity', image: img4, title: 'Business Card', description: 'Cybersecurity' },
-  { category: 'WebApp', image: img5, title: 'Back Pack', description: 'WebApp' }
+  { category: 'WebApp', url: 'https://joypits.github.io/iconstagecraftbuilders/', image: img1, title: 'Icon Stagecraft Builders', description: 'Sound and Light Rental Services' },
+  // { category: 'Cybersecurity', url: 'https://joypits.github.io/vue-cv', image: img2, title: 'Notepad Design', description: 'Cybersecurity' },
+  // { category: 'Photography', url: 'https://joypits.github.io/vue-cv',image: img3, title: 'Creative Cup', description: 'Photography' },
+  // { category: 'Cybersecurity', url: 'https://joypits.github.io/vue-cv',image: img4, title: 'Business Card', description: 'Cybersecurity' },
+  // { category: 'WebApp', url: 'https://joypits.github.io/vue-cv', image: img5, title: 'Back Pack', description: 'WebApp' }
 ]
 
-const filters = ['All', 'WebApp', 'Cybersecurity', 'Photography', 'Certifications']
+const filters = ['All', 'WebApp', 'Cybersecurity', 'Photography','VMware','Certifications']
 
 // **Reactive selected filter**
 const selectedFilter = ref('All')
@@ -40,6 +40,7 @@ function selectFilter(filter) {
       <div class="page-heading">
         <span class="icon"><i class="lnr lnr-briefcase"></i></span>
         <h2>Portfolio</h2>
+        <p>Some of my recent works.</p>
       </div>
 
       <div class="row">
@@ -65,7 +66,7 @@ function selectFilter(filter) {
           v-for="(item, i) in filteredItems"
           :key="i"
         >
-          <a class="image-link" :href="item.image">
+          <a class="image-link" :href="item.url" target="_blank" rel="noopener">
             <figure>
               <img :src="item.image" :alt="item.title" />
               <figcaption>

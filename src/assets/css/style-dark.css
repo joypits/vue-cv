@@ -1339,6 +1339,11 @@ header .header-mobile .header-toggle i {
     color: #fff;
 }
 
+.portfolio-section .item figure img {
+    width: 300px;
+    height: 200px;
+}
+
 .portfolio-section .item figure figcaption h4,
 .portfolio-section .item figure figcaption p {
     opacity: 0;

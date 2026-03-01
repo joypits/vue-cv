@@ -23,7 +23,6 @@ const navItems = [
   { label: 'About Me', path: '/about', icon: 'lnr lnr-user' },
   { label: 'Resume', path: '/resume', icon: 'lnr lnr-license' },
   { label: 'Portfolio', path: '/portfolio', icon: 'lnr lnr-briefcase' },
-  { label: 'Blog', path: '/blog', icon: 'lnr lnr-book' },
   { label: 'Contact', path: '/contact', icon: 'lnr lnr-envelope' },
 ]
 </script>
