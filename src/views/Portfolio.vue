@@ -9,7 +9,7 @@ import img5 from '@/assets/img/portfolio/img-5.jpg'
 
 const portfolioItems = [
   { category: 'WebApp', url: 'https://joypits.github.io/iconstagecraftbuilders/', image: img1, title: 'Icon Stagecraft Builders', description: 'Sound and Light Rental Services' },
-  // { category: 'Cybersecurity', url: 'https://joypits.github.io/vue-cv', image: img2, title: 'Notepad Design', description: 'Cybersecurity' },
+  { category: 'WebApp', url: 'https://aliceblue-wolverine-782497.hostingersite.com/', image: img2, title: 'Pickleball Booking App', description: 'Pickleball Booking App' },
   // { category: 'Photography', url: 'https://joypits.github.io/vue-cv',image: img3, title: 'Creative Cup', description: 'Photography' },
   // { category: 'Cybersecurity', url: 'https://joypits.github.io/vue-cv',image: img4, title: 'Business Card', description: 'Cybersecurity' },
   // { category: 'WebApp', url: 'https://joypits.github.io/vue-cv', image: img5, title: 'Back Pack', description: 'WebApp' }
